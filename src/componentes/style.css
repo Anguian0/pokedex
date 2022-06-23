@@ -15,14 +15,19 @@ h6 {
   font-family: "Koulen", cursive;
 }
 
+h5 {
+  text-decoration: underline;
+}
+
 body {
-  background-color: antiquewhite;
+  background-image: url(/public/fondo.png);
+  background-attachment: fixed;
 }
 
 .container {
   width: 90%;
   margin: auto;
-  padding-top: 100px;
+  padding-top: 32px;
   display: flex;
 }
 
@@ -39,7 +44,8 @@ body {
 
 .card {
   width: 300px;
-  background-color: aquamarine;
+  height: 50px;
+  /* background-color: #B0E2FF; */
   border-radius: 1rem;
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
   padding: 0 1.5rem;
@@ -47,25 +53,52 @@ body {
   align-items: center;
   justify-content: space-between;
   box-sizing: border-box;
+  cursor: pointer;
+  border-left: 10px outset #2F2F2F;
+  /* border-right: 10px inset #2F2F2F; */
+  position: relative;
+}
+
+.animation :hover{
+  transform: matrix(1, 0, 0, 1, 0, -3.100);
+}
+
+.animation .card :hover{
+  transform: matrix(1, 0, 0, 1, 0, 0);
 }
 
 .card > img {
-  width: 20%;
+  width: 35%;
   padding: 10px 0 10px 0;
+  position: absolute;
 }
 
 .right-content {
-  width: 50%;
+  width: 45%;
   text-align: center;
   color: black;
   position: fixed;
-  top: 65px;
-  right: 10px;
+  top: 100px;
+  /* right: 10px; */
+  right: 0px;
+  background-color: #F23535;
+  padding: 15px 0 20px 0;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
+  border-radius: 8px 0 0 8px;
+  border-left: 15px outset #2F2F2F;
 }
 
-.right-content > img {
-  margin: 2rem;
-  height: 190px;
+.container_img {
+  margin: 3% 35% 9% 35%;
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  border: 1px solid #2F2F2F
+}
+
+.container_img > img {
+  margin: 1.5rem;
+  height: 150px;
 }
 
 .right-content > text {
@@ -75,7 +108,7 @@ body {
 }
 
 .abilities {
-  width: 30%;
+  width: 50%;
   margin: auto;
   display: flex;
   justify-content: space-around;
@@ -84,12 +117,17 @@ body {
 }
 
 .abilities .group {
-  background-color: coral;
-  color: whitesmoke;
-  padding: 0.5rem;
+  color: #F2F2F2;
   font-size: 12px;
   border-radius: 8px;
   text-shadow: 0.5px 0.5px 2px black;
+  margin: 0 5px 0 5px;
+}
+
+.stats {
+  padding: 3px 6px 3px 6px;
+  text-shadow: 0.5px 0.5px 2px black;
+  border-radius: 8px;
 }
 
 .base-stat {
@@ -98,6 +136,8 @@ body {
 
 .btn-group {
   display: flex;
+  margin: 0 0 1rem 0;
+  transition: background-color .5s;
 }
 
 .btn-group > button {
@@ -108,8 +148,126 @@ body {
   margin: 1rem;
   font-size: 17px;
   font-weight: bold;
-  color: whitesmoke;
-  background-color: coral;
+  color: #F2F2F2;
+  background-color: #F23535;
   border-radius: 8px;
   text-shadow: 0.5px 0.5px 2px black;
+  cursor: pointer;
+  transition: background-color .5s;
+}
+
+.btn-group :hover {
+  background-color: coral;
+}
+
+.title {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0px;
+  background-image: url(/public/fondo_black.png);
+  text-align: center;
+  color: #F2F2F2;
+  text-shadow: 0.5px 0.5px 2px black;
+  z-index: 1000;
+  padding: 5px 0 5px 0;
+}
+
+.title > img {
+  width: 124px;
+  transition: 0.4s transform;
+}
+
+.title > img:hover {
+  transform: scale(0.97);
+}
+
+.title_right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title_type {
+  background-color: coral;
+  border-radius: 8px;
+  justify-items: center;
+  padding: 2px 5px 2px 5px;
+  margin: 0px 5px 0px 5px;
+}
+
+.espacio {
+  width: 85px;
+}
+
+.bug {
+  background: #aedf78;
+}
+
+.water {
+  background: #43ccff;
+}
+
+.grass {
+  background: #00ca91;
+}
+
+.fire {
+  background: #e95c4d;
+}
+
+.normal {
+  background: #a5a5a5;
+}
+
+.poison {
+  background: #611380;
+}
+
+.electric {
+  background: #f9be00;
+}
+.ground {
+  background: #bfac21;
+}
+
+.fairy {
+  background: #f87ea7;
+}
+
+.fighting {
+  background: #e81319;
+}
+.psychic {
+  background: #8a0532;
+}
+
+.ghost {
+  background: #8e55a4;
+}
+.rock {
+  background: #776a3e;
+}
+.ice {
+  background: #66d1e5;
+}
+.flying {
+  background: #5eb9b2;
+}
+.dark {
+  background: #2d221c;
+}
+
+.dragon {
+  background: #29036a;
+}
+
+.steel {
+  background: #7b8e8a;
+}
+.unknown {
+  background: #454545;
+}
+
+.shadow {
+  background: #4f4f4f;
 }

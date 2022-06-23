@@ -40,12 +40,21 @@ const Main = () => {
 
   return (
     <>
+    <div className="title">
+    <img src="titulo.png" alt="" />
+    </div>
       <div className="container">
         <div className="left-content">
           <Card pokemon={pokeData} loading={loading} infoPokemon={poke=>setPokeDex(poke)}/>
           <div className="btn-group">
-            <button>Atras</button>
-            <button>Siguiente</button>
+            { prevUrl && <button onClick={() => {
+              setPokeData([])
+              setUrl(prevUrl)
+            }}><i class="bi bi-caret-left-fill"></i>Atras</button>}
+            { nextUrl && <button onClick={() => {
+              setPokeData([])
+              setUrl(nextUrl)
+            }}>Siguiente<i class="bi bi-caret-right-fill"></i></button>}
           </div>
         </div>
         <div className="right-content">
